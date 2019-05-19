@@ -1,6 +1,20 @@
 # pegale_k8s
 pegale a k8s
 
+mvn clean install
+
+docker build -f DockerFile -t demopegale .
+
+docker run -p 8080:8080 demopegale
+
+docker login
+
+docker tag demopegale dingan/pegale:1
+
+docker images
+
+docker push dingan/pegale:1
+
 kubectl apply -f demopegale.yml
 
 kubectl get pods
