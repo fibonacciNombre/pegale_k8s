@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pegale
+  labels:
+    app: pegale
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pegale
+  template:
+    metadata:
+      labels:
+        app: pegale
+    spec:
+      containers:
+      - name: pegale
+        image: dingan/pegale:1
+        ports:
+        - containerPort: 8080
