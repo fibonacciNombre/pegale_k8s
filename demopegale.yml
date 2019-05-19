@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pegale
+  name: pegaleazr
   labels:
-    app: pegale
+    app: pegaleazr
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: pegale
+      app: pegaleazr
   template:
     metadata:
       labels:
-        app: pegale
+        app: pegaleazr
     spec:
       containers:
       - name: pegale
-        image: dingan/pegale:1
+        image: acreu1c002bnnidev01.azurecr.io/pegale:1
         ports:
         - containerPort: 8080
