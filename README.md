@@ -56,4 +56,4 @@ az acr repository list -n acr001
 
 docker push acr001.azurecr.io/pegale:1
 
-az acr login -n acr001
+az acr repository list -n acr001
